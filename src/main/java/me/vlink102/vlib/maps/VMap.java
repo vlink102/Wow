@@ -1,7 +1,9 @@
-package me.vlink102.maps;
+package me.vlink102.vlib.maps;
 
-import java.io.Serializable;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class VMap<K, V> extends HashMap<K, V> {
@@ -18,7 +20,7 @@ public class VMap<K, V> extends HashMap<K, V> {
     }
 
     public VMap<V, K> invert() {
-        Map<V, K> inverted = entrySet().stream().collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));
+        Map<V, K> inverted = entrySet().stream().collect(Collectors.toMap(Entry::getValue, Entry::getKey));
         return new VMap<>(inverted);
     }
 

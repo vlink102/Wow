@@ -1,4 +1,4 @@
-package me.vlink102.generic.math;
+package me.vlink102.vlib.generic.math;
 
 public record Vector3D(double uX, double uY, double uZ) {
     public double[][] toMatrix() {

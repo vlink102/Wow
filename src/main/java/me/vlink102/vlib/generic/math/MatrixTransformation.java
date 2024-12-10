@@ -1,4 +1,4 @@
-package me.vlink102.generic.math;
+package me.vlink102.vlib.generic.math;
 
 public class MatrixTransformation {
     public class Matrix2D {
@@ -104,7 +104,7 @@ public class MatrixTransformation {
                     {0, Math.cos(theta), -Math.sin(theta)},
                     {0, Math.sin(theta), Math.cos(theta)}
             };
-            double[][] rotated = MatrixTransformation.Matrix2D.multiply(initial.toMatrix(), rotationMatrix);
+            double[][] rotated = Matrix2D.multiply(initial.toMatrix(), rotationMatrix);
 
             return Vector3D.of(rotated);
         }
@@ -115,7 +115,7 @@ public class MatrixTransformation {
                     {0, 1, 0},
                     {-Math.sin(theta), 0, Math.cos(theta)}
             };
-            double[][] rotated = MatrixTransformation.Matrix2D.multiply(initial.toMatrix(), rotationMatrix);
+            double[][] rotated = Matrix2D.multiply(initial.toMatrix(), rotationMatrix);
             return Vector3D.of(rotated);
         }
 
@@ -125,7 +125,7 @@ public class MatrixTransformation {
                     {Math.sin(theta), Math.cos(theta), 0},
                     {0, 0, 1}
             };
-            double[][] rotated = MatrixTransformation.Matrix2D.multiply(initial.toMatrix(), rotationMatrix);
+            double[][] rotated = Matrix2D.multiply(initial.toMatrix(), rotationMatrix);
             return Vector3D.of(rotated);
         }
 
@@ -135,7 +135,7 @@ public class MatrixTransformation {
                     {Math.sin(yaw) * Math.cos(pitch), Math.sin(yaw) * Math.sin(pitch) * Math.sin(roll) + Math.cos(yaw) * Math.cos(roll), Math.sin(yaw) * Math.sin(pitch) * Math.cos(roll) - Math.cos(yaw) * Math.sin(roll)},
                     {-Math.sin(pitch), Math.cos(pitch) * Math.sin(roll), Math.cos(pitch) * Math.cos(roll)}
             };
-            return MatrixTransformation.Matrix2D.multiply(matrix, rotationMatrix);
+            return Matrix2D.multiply(matrix, rotationMatrix);
         }
 
         public static double tR(double theta) {
@@ -172,7 +172,7 @@ public class MatrixTransformation {
                     }
             };
 
-            return MatrixTransformation.Matrix2D.multiply(matrix, rotationMatrix);
+            return Matrix2D.multiply(matrix, rotationMatrix);
         }
     }
 }

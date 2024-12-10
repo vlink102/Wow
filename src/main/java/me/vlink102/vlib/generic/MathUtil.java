@@ -1,7 +1,7 @@
-package me.vlink102.generic;
+package me.vlink102.vlib.generic;
 
-import me.vlink102.generic.math.MatrixTransformation;
-import me.vlink102.generic.math.Vector3D;
+
+import me.vlink102.vlib.generic.math.Vector3D;
 
 public class MathUtil {
     public static final double DEGREES_TO_RADIANS = 0.017453292519943295;

@@ -1,6 +1,4 @@
-package me.vlink102.generic.math;
-
-import java.util.Arrays;
+package me.vlink102.vlib.generic.math;
 
 public class AlphaTensor {
 
